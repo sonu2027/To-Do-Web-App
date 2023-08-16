@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocumenTo do web app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center">To do list</h1>
+    <div id="taskAdding">
+      <input type="text" name="" id="inputTag" placeholder="Add your task" />
+      <button onclick="addTask()">Add your task</button>
+    </div>
+
+    <h2 class="htwo" style="text-align: center; margin-top: 2rem; margin-bottom: 1rem">pending Task</h2>
+
+    <div id="pendingTask"></div>
+
+    <div id="editmid">
+      <div id="edit">
+        <input value="" id="editTask" placeholder="Edit your task" type="text"/><br/>
+        <button id="cancelButton">Cancel</button>
+        <button id="updateButton">Update</button>
+      </div>
+    </div>
+
+    <h2 class="htwo" style="text-align: center; margin-top: 2rem">Task Completed</h2>
+    <div id="completedTask"></div>
+
+    <script src="script.js"></script>
+    <script type="module" src="script2.js"></script>
+  </body>
+</html>

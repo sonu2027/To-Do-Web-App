@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#taskAdding{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    margin: 2rem 0 2rem 0;
+}
+#taskAdding input{
+    border-radius: 10px;
+    height: 2rem;
+    width: 10rem;
+}
+#taskAdding button{
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+h1{
+    margin-top: 1rem;
+    text-decoration: underline;
+}
+#pendingTask, #completedTask{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+}
+.democlass button{
+    margin: 5px;
+}
+.htwo, #edit{
+    display: none;
+}
+#edit{
+    position: fixed;
+    bottom: 50vh;
+    background-color: rgb(198, 187, 187);
+    padding: 3rem 4rem;
+    border-radius: 5px;
+}
+#editmid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+}
+#edit input{
+    border-radius: 10px;
+    height: 2rem;
+    width: 10rem;
+}
+#edit button{
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 8px;
+}
