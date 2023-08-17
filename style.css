@@ -2,6 +2,13 @@
     margin: 0;
     padding: 0;
 }
+html{
+    font-size: 110%;
+}
+body{
+    font-family: sans-serif;
+    background-color: rgb(145, 145, 182);
+}
 #taskAdding{
     display: flex;
     justify-content: center;
@@ -13,14 +20,29 @@
     border-radius: 10px;
     height: 2rem;
     width: 10rem;
+    background-color: rgb(251, 240, 240);
+    border: none;
+    text-align: center;
+}
+#taskAdding input:focus{
+    outline: none;
 }
 #taskAdding button{
-    padding: 5px 10px;
+    padding: 6px 12px;
     border-radius: 10px;
+    color: #fff;
+    background-color: rgb(145, 145, 182);
+    border: 2px solid #fff;
+}
+#taskAdding button:hover{
+    background-color: #fff;
+    color: rgb(12, 12, 12);
+    border: 2px solid #fff;
 }
 h1{
     margin-top: 1rem;
     text-decoration: underline;
+    color: rgb(232, 22, 22);
 }
 #pendingTask, #completedTask{
     display: flex;
@@ -28,6 +50,9 @@ h1{
     justify-content: center;
     align-items: center;
     row-gap: 1rem;
+}
+.htwo{
+    margin-bottom: 1rem;
 }
 .democlass button{
     margin: 5px;
@@ -74,7 +99,33 @@ footer{
     /* position: fixed;
     bottom: 1rem; */
     margin-top: 22rem;
+    margin-bottom: 1rem;
 }
 span{
-    color: rgb(74, 118, 250);
+    color: rgb(16, 75, 252);
+}
+.button1Class{
+    padding: 3px 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(247, 247, 6);
+    color: grey;
+}
+.button2Class{
+    padding: 3px 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(232, 22, 22);
+    color: rgb(220, 232, 242);
+}
+.button3Class{
+    padding: 3px 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(3, 149, 29);
+    color: rgb(220, 232, 242);
+}
+.button1Class:hover, .button2Class:hover, .button3Class:hover{
+    background-color: #fff;
+    color: rgb(8, 8, 8);
 }

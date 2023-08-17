@@ -236,7 +236,7 @@ function markCompletedButton(s){
     x.style.width = "16rem";
     x.style.textAlign = "center";
     x.style.borderRadius = "10px";
-    x.style.border = "1px solid grey";
+    x.style.border = "none";
 
     htwo[0].style.display="none"
     workDone=0
