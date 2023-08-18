@@ -1,12 +1,16 @@
 let inputTag = document.getElementById("inputTag");
 let pendingTask = document.getElementById("pendingTask");
 const htwo = document.getElementsByClassName("htwo");
+
+let straightLine=document.getElementsByTagName("hr")
 let count = 0;
 let totalNoOfTask = 0;
 let taskCompleted=0
 let workDone=100
 let workDoneTimes=-1
 function addTask() {
+  straightLine[0].style.display="block"
+  straightLine[1].style.display="block"
   if(workDone==0){
     let hurrah=document.getElementsByClassName("demo")
     hurrah[workDoneTimes].style.display="none"
@@ -103,6 +107,8 @@ function addTask() {
 
     count++;
     totalNoOfTask++;
+    htwo[0].innerText=`${totalNoOfTask} Pending task`
+    htwo[1].innerText=`${taskCompleted} Task completed`
   }
 }
 
@@ -120,10 +126,12 @@ function edit(s) {
       editingClass[s].innerText = editTask.value;
       edit.style.display = "none";
       execute++;
-    } 
-    // else {
-    //   alert("please edit your task first");
-    // }
+    }
+  });
+
+  let cancel = document.getElementById("cancelButton");
+  cancel.addEventListener("click", function () {
+      edit.style.display = "none";
   });
 }
 
@@ -131,6 +139,9 @@ function deleteButton(s) {
   democlass = document.getElementsByClassName("democlass");
   democlass[s].style.display = "none";
   totalNoOfTask--;
+  htwo[0].innerText=`${totalNoOfTask} Pending task`
+  htwo[1].innerText=`${taskCompleted} Task completed`
+  htwo[0].innerText=`${totalNoOfTask} Task completed`
   if (totalNoOfTask == 0) {
      // Creating class attribute
      let classAttribute = document.createAttribute("class");
@@ -199,6 +210,8 @@ function markCompletedButton(s){
   taskCompleted++
   totalNoOfTask--
   console.log("Total no of task", totalNoOfTask);
+  htwo[0].innerText=`${totalNoOfTask} Pending task`
+  htwo[1].innerText=`${taskCompleted} Pending task`
 
   if(totalNoOfTask==0){
     // Creating class attribute

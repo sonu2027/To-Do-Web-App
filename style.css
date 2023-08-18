@@ -71,7 +71,32 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: grey;
+    background-color: rgb(145, 145, 182);
+}
+#cancelButton{
+    border: none;
+    background-color: rgb(232, 22, 22);
+    color: #fff;
+}
+#updateButton{
+    border: none;
+    background-color: rgb(3, 149, 29);
+    color: #fff;
+}
+#edit input{
+    border-radius: 10px;
+    height: 2rem;
+    width: 10rem;
+    background-color: rgb(251, 240, 240);
+    border: none;
+    text-align: center;
+}
+#edit input:focus{
+    outline: none;
+}
+#edit button:hover{
+    color: rgb(232, 22, 22);
+    background-color: #fff;
 }
 #edit input{
     border-radius: 10px;
@@ -128,4 +153,13 @@ span{
 .button1Class:hover, .button2Class:hover, .button3Class:hover{
     background-color: #fff;
     color: rgb(8, 8, 8);
+}
+.horizontalLine{
+    display:flex; align-items:center; justify-content:center;
+    background-color: rgb(145, 145, 182);
+}
+hr{
+    display: none;
+    width:18rem; 
+    margin:1.5rem 0 0 0;
 }
