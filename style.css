@@ -1,165 +1,192 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-html{
-    font-size: 110%;
+html {
+  font-size: 110%;
 }
-body{
-    font-family: sans-serif;
-    background-color: rgb(145, 145, 182);
+body {
+  font-family: sans-serif;
+  background-color: rgb(145, 145, 182);
 }
-#taskAdding{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 10px;
-    margin: 2rem 0 2rem 0;
+#taskAdding {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  margin: 2rem 0 2rem 0;
 }
-#taskAdding input{
-    border-radius: 10px;
-    height: 2rem;
-    width: 10rem;
-    background-color: rgb(251, 240, 240);
-    border: none;
-    text-align: center;
+#taskAdding input {
+  border-radius: 10px;
+  height: 2rem;
+  width: 10rem;
+  background-color: rgb(251, 240, 240);
+  border: none;
+  text-align: center;
 }
-#taskAdding input:focus{
-    outline: none;
+#taskAdding input:focus {
+  outline: none;
 }
-#taskAdding button{
-    padding: 6px 12px;
-    border-radius: 10px;
-    color: #fff;
-    background-color: rgb(145, 145, 182);
-    border: 2px solid #fff;
+#taskAdding button {
+  padding: 6px 12px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: rgb(145, 145, 182);
+  border: 2px solid #fff;
 }
-#taskAdding button:hover{
-    background-color: #fff;
-    color: rgb(12, 12, 12);
-    border: 2px solid #fff;
+#taskAdding button:hover {
+  background-color: #fff;
+  color: rgb(12, 12, 12);
+  border: 2px solid #fff;
+  cursor: pointer;
 }
-h1{
-    margin-top: 1rem;
-    text-decoration: underline;
-    color: rgb(232, 22, 22);
+h1 {
+  margin-top: 1rem;
+  text-decoration: underline;
+  color: rgb(232, 22, 22);
 }
-#pendingTask, #completedTask{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 1rem;
+#pendingTask,
+#completedTask {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
 }
-.htwo{
-    margin-bottom: 1rem;
+.htwo {
+  margin-bottom: 1rem;
 }
-.democlass button{
-    margin: 5px;
+.democlass button {
+  margin: 5px;
 }
-.htwo, #edit{
-    display: none;
+.htwo,
+#edit {
+  display: none;
 }
-#edit{
-    position: fixed;
-    bottom: 50vh;
-    background-color: rgb(198, 187, 187);
-    padding: 3rem 4rem;
-    border-radius: 5px;
+#edit {
+  position: fixed;
+  bottom: 50vh;
+  background-color: rgb(198, 187, 187);
+  padding: 3rem 4rem;
+  border-radius: 5px;
 }
-#editmid{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(145, 145, 182);
+#editmid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(145, 145, 182);
 }
-#cancelButton{
-    border: none;
-    background-color: rgb(232, 22, 22);
-    color: #fff;
+#cancelButton {
+  border: none;
+  background-color: rgb(232, 22, 22);
+  color: #fff;
 }
-#updateButton{
-    border: none;
-    background-color: rgb(3, 149, 29);
-    color: #fff;
+#updateButton {
+  border: none;
+  background-color: rgb(3, 149, 29);
+  color: #fff;
 }
-#edit input{
-    border-radius: 10px;
-    height: 2rem;
-    width: 10rem;
-    background-color: rgb(251, 240, 240);
-    border: none;
-    text-align: center;
+#edit input {
+  border-radius: 10px;
+  height: 2rem;
+  width: 10rem;
+  background-color: rgb(251, 240, 240);
+  border: none;
+  text-align: center;
 }
-#edit input:focus{
-    outline: none;
+#edit input:focus {
+  outline: none;
 }
-#edit button:hover{
-    color: rgb(232, 22, 22);
-    background-color: #fff;
+#edit button:hover {
+  color: rgb(232, 22, 22);
+  background-color: #fff;
+  cursor: pointer;
 }
-#edit input{
-    border-radius: 10px;
-    height: 2rem;
-    width: 10rem;
+#edit input {
+  border-radius: 10px;
+  height: 2rem;
+  width: 10rem;
 }
-#edit button{
-    padding: 5px 10px;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-left: 8px;
+#edit button {
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 8px;
 }
 
 /* footer */
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* position: fixed;
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: fixed;
     bottom: 1rem; */
-    margin-top: 22rem;
-    margin-bottom: 1rem;
+  margin-top: 22rem;
+  margin-bottom: 1rem;
 }
-span{
-    color: rgb(16, 75, 252);
+span {
+  color: rgb(16, 75, 252);
 }
-.button1Class{
-    padding: 3px 8px;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(247, 247, 6);
-    color: grey;
+.button1Class {
+  padding: 3px 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(247, 247, 6);
+  color: grey;
 }
-.button2Class{
-    padding: 3px 8px;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(232, 22, 22);
-    color: rgb(220, 232, 242);
+.button2Class {
+  padding: 3px 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(232, 22, 22);
+  color: rgb(220, 232, 242);
 }
-.button3Class{
-    padding: 3px 8px;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(3, 149, 29);
-    color: rgb(220, 232, 242);
+.button3Class {
+  padding: 3px 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(3, 149, 29);
+  color: rgb(220, 232, 242);
 }
-.button1Class:hover, .button2Class:hover, .button3Class:hover{
-    background-color: #fff;
-    color: rgb(8, 8, 8);
+.button1Class:hover,
+.button2Class:hover,
+.button3Class:hover {
+  background-color: #fff;
+  color: rgb(8, 8, 8);
+  cursor: pointer;
 }
-.horizontalLine{
-    display:flex; align-items:center; justify-content:center;
-    background-color: rgb(145, 145, 182);
+.horizontalLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(145, 145, 182);
 }
-hr{
-    display: none;
-    width:18rem; 
-    margin:1.5rem 0 0 0;
+hr {
+  display: none;
+  width: 18rem;
+  margin: 1.5rem 0 0 0;
+}
+
+.deleteButtonToUnmarked {
+  background-color: rgb(232, 22, 22);
+  color: rgb(220, 232, 242);
+  padding: 0 12px;
+  border-style: none;
+  border-radius: 4px;
+}
+.deleteButtonToUnmarked:hover{
+  color: rgb(4, 4, 4);
+  background-color: rgb(220, 232, 242);
+  cursor: pointer;
+  }
+.eachTaskClass{
+    display: flex;
+    column-gap: 10px;
+    margin: 5px 0;
 }
