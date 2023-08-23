@@ -133,6 +133,7 @@ footer {
 span {
   color: rgb(16, 75, 252);
 }
+/*Footer completed*/
 .button1Class {
   padding: 3px 8px;
   border-radius: 5px;
@@ -190,3 +191,4 @@ hr {
     column-gap: 10px;
     margin: 5px 0;
 }
+
