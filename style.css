@@ -53,13 +53,13 @@ h1 {
   align-items: center;
   row-gap: 1rem;
 }
-.htwo {
+.taskStatus {
   margin-bottom: 1rem;
 }
 .democlass button {
   margin: 5px;
 }
-.htwo,
+.taskStatus,
 #edit {
   display: none;
 }
@@ -86,7 +86,7 @@ h1 {
   background-color: rgb(3, 149, 29);
   color: #fff;
 }
-#edit input {
+#editButton {
   border-radius: 10px;
   height: 2rem;
   width: 10rem;

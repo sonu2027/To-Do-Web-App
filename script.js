@@ -1,6 +1,6 @@
 let inputTag = document.getElementById("inputTag");
 let pendingTask = document.getElementById("pendingTask");
-const htwo = document.getElementsByClassName("htwo");
+const taskStatus = document.getElementsByClassName("taskStatus");
 
 let straightLine=document.getElementsByTagName("hr")
 let count = 0;
@@ -10,8 +10,6 @@ let workDone=100
 let workDoneTimes=-1
 
 function addTask() {
-  straightLine[0].style.display="block"
-  straightLine[1].style.display="block"
   if(workDone==0){
     let hurrah=document.getElementsByClassName("demo")
     hurrah[workDoneTimes].style.display="none"
@@ -19,9 +17,11 @@ function addTask() {
   if (inputTag.value == "") {
     alert("Please enter your task first");
   } else {
+    straightLine[0].style.display="block"
+    straightLine[1].style.display="block"
     // Keeping display none of h2 tag (Pending task and task completed)
-    htwo[0].style.display = "block";
-    htwo[1].style.display = "block";
+    taskStatus[0].style.display = "block";
+    taskStatus[1].style.display = "block";
 
     // Creating class attribute
     let classAttribute = document.createAttribute("class");
@@ -108,8 +108,8 @@ function addTask() {
 
     count++;
     totalNoOfTask++;
-    htwo[0].innerText=`${totalNoOfTask} Pending task`
-    htwo[1].innerText=`${taskCompleted} Task completed`
+    taskStatus[0].innerText=`${totalNoOfTask} Pending task`
+    taskStatus[1].innerText=`${taskCompleted} Task completed`
   }
 }
 
@@ -120,11 +120,11 @@ function edit(s) {
   edit.style.display = "block";
 
   let update = document.getElementById("updateButton");
-  let editTask = document.getElementById("editTask");
+  let editButton = document.getElementById("editButton");
   let editingClass = document.getElementsByClassName("editingClass");
   update.addEventListener("click", function () {
-    if (execute == 0 && editTask.value != "") {
-      editingClass[s].innerText = editTask.value;
+    if (execute == 0 && editButton.value != "") {
+      editingClass[s].innerText = editButton.value;
       edit.style.display = "none";
       execute++;
     }
@@ -140,8 +140,8 @@ function deleteButton(s) {
   democlass = document.getElementsByClassName("democlass");
   democlass[s].style.display = "none";
   totalNoOfTask--;
-  htwo[0].innerText=`${totalNoOfTask} Pending task`
-  htwo[1].innerText=`${taskCompleted} Task completed`
+  taskStatus[0].innerText=`${totalNoOfTask} Pending task`
+  taskStatus[1].innerText=`${taskCompleted} Task completed`
   if (totalNoOfTask == 0 && taskCompleted!=0) {
      // Creating class attribute
      let classAttribute = document.createAttribute("class");
@@ -157,9 +157,6 @@ function deleteButton(s) {
  
      // Appending the div element on pending task
      pendingTask.appendChild(createDiv);
- 
-     // let hurrah=document.getElementsByClassName("demo")
-     // hurrah[0].style.display="block"
  
      // creating a new paragrap element with name x
      let x = document.createElement("p");
@@ -181,7 +178,7 @@ function deleteButton(s) {
      x.style.borderRadius = "10px";
      x.style.border = "1px solid grey";
  
-     htwo[0].style.display="none"
+     taskStatus[0].style.display="none"
      workDone=0
      workDoneTimes++
   }
@@ -223,7 +220,7 @@ function deleteButton(s) {
     x.style.borderRadius = "10px";
     x.style.border = "1px solid grey";
 
-    htwo[0].style.display="none"
+    taskStatus[0].style.display="none"
     workDone=0
     workDoneTimes++
  }
@@ -259,10 +256,6 @@ function markCompletedButton(s){
   deleteElementClassAtr.value="deleteElementClassAtr"
   div.setAttributeNode(deleteElementClassAtr)
 
-
-
-
-
    // Setting the styling of paragraph x
    x.style.padding = "5px 0 5px 0";
    x.style.backgroundColor = "rgb(205, 202, 202)";
@@ -277,34 +270,11 @@ function markCompletedButton(s){
   taskCompleted++
   totalNoOfTask--
   console.log("Total no of task", totalNoOfTask);
-  htwo[0].innerText=`${totalNoOfTask} Pending task`
-  htwo[1].innerText=`${taskCompleted} Task completed`
+  taskStatus[0].innerText=`${totalNoOfTask} Pending task`
+  taskStatus[1].innerText=`${taskCompleted} Task completed`
 
 
   completedTask.style.display="flex"
-/*
-  // Adding deleting feature in task completed
-  let eachTask=document.createElement("div")
-  let eachTaskClass=document.createAttribute("class")
-  eachTaskClass.value="eachTaskClass"
-  eachTask.setAttributeNode(eachTaskClass)
-  eachTask.appendChild(x)
-  completedTask.appendChild(eachTask)
-
-  //Adding delete button in deleting feature
-  let deleteButton=document.createElement("button")
-  deleteButton.innerText="Unmarked"
-  eachTask.appendChild(deleteButton)
-
-  // Creating attribute for delete button
-  let deleteButtonClassAttribute=document.createAttribute("class")
-  deleteButtonClassAttribute.value="deleteButtonToUnmarked"
-  deleteButton.setAttributeNode(deleteButtonClassAttribute)
-
-  let deleteButtonOnclickAttribute=document.createAttribute("onclick")
-  deleteButtonOnclickAttribute.value=`unmarkedTask(${s}, ${taskCompleted-1})`
-  deleteButton.setAttributeNode(deleteButtonOnclickAttribute)
-  */
 
 
   if(totalNoOfTask==0){
@@ -345,7 +315,7 @@ function markCompletedButton(s){
     x.style.borderRadius = "10px";
     x.style.border = "none";
 
-    htwo[0].style.display="none"
+    taskStatus[0].style.display="none"
     workDone=0
     workDoneTimes++
  }
@@ -356,8 +326,8 @@ function remove(s){
   deleteElementClassAtr[s].style.display="none"
   taskCompleted--
   // totalNoOfTask--
-  htwo[0].innerText=`${totalNoOfTask} Pending task`
-  htwo[1].innerText=`${taskCompleted} Task completed`
+  taskStatus[0].innerText=`${totalNoOfTask} Pending task`
+  taskStatus[1].innerText=`${taskCompleted} Task completed`
   if(taskCompleted==0 && totalNoOfTask==0){
     let classEditing=document.getElementsByClassName("classEditing")
     classEditing[0].innerText="You haven't completed any task 😶, add some task to continue";
