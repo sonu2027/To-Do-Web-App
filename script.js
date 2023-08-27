@@ -96,7 +96,7 @@ function addTask() {
 
     // Putting the innertext on operation button
     button1.innerText = "Edit";
-    button2.innerText = "Delete";
+    button2.innerText = "Remove";
     button3.innerText = "Mark Completed";
 
     // Appending the operation button on createDiv element
@@ -228,12 +228,40 @@ function deleteButton(s) {
     workDoneTimes++
  }
 }
+let deleteButtonOnclickValue=0
 function markCompletedButton(s){
   let editingClass=document.getElementsByClassName("editingClass")
   let completedTask=document.getElementById("completedTask")
+  let div=document.createElement("div")
   let x=document.createElement("p")
+  let deleteElement=document.createElement("button")
+  deleteElement.innerText="Remove"
   x.innerText=editingClass[s].innerText
-  completedTask.appendChild(x)
+  div.appendChild(x)
+  div.appendChild(deleteElement)
+  completedTask.appendChild(div)
+
+  //Delete element styling
+  div.style.textAlign="center"
+  deleteElement.style.borderRadius="4px"
+  deleteElement.style.border="none"
+  deleteElement.style.padding="3px 8px"
+  deleteElement.style.margin="6px 0px 6px 0px"
+  deleteElement.style.backgroundColor="rgb(232, 22, 22)"
+  deleteElement.style.color="#fff"
+
+  let deleteElementOnclickAtr=document.createAttribute("onclick")
+  deleteElementOnclickAtr.value=`remove(${deleteButtonOnclickValue})`
+  deleteButtonOnclickValue++
+  deleteElement.setAttributeNode(deleteElementOnclickAtr)
+
+  let deleteElementClassAtr=document.createAttribute("class")
+  deleteElementClassAtr.value="deleteElementClassAtr"
+  div.setAttributeNode(deleteElementClassAtr)
+
+
+
+
 
    // Setting the styling of paragraph x
    x.style.padding = "5px 0 5px 0";
@@ -321,4 +349,17 @@ function markCompletedButton(s){
     workDone=0
     workDoneTimes++
  }
+}
+
+function remove(s){
+  let deleteElementClassAtr=document.getElementsByClassName("deleteElementClassAtr")
+  deleteElementClassAtr[s].style.display="none"
+  taskCompleted--
+  // totalNoOfTask--
+  htwo[0].innerText=`${totalNoOfTask} Pending task`
+  htwo[1].innerText=`${taskCompleted} Task completed`
+  if(taskCompleted==0 && totalNoOfTask==0){
+    let classEditing=document.getElementsByClassName("classEditing")
+    classEditing[0].innerText="You haven't completed any task 😶, add some task to continue";
+  }
 }
