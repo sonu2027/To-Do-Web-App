@@ -7,6 +7,15 @@ html {
 }
 body {
   font-family: sans-serif;
+  /* background-color: rgb(145, 145, 182); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main-div{
+  border-radius: 8px;
+  margin-top: 1rem;
+  width: 25rem;
   background-color: rgb(145, 145, 182);
 }
 #taskAdding {
@@ -127,7 +136,7 @@ footer {
   align-items: center;
   /* position: fixed;
     bottom: 1rem; */
-  margin-top: 22rem;
+  margin-top: 20rem;
   margin-bottom: 1rem;
 }
 span {
@@ -191,4 +200,9 @@ hr {
     column-gap: 10px;
     margin: 5px 0;
 }
-
+@media screen and (max-width:500px) {
+  #main-div{
+    margin-top: 0;
+    border-radius: 0;
+  }
+}
